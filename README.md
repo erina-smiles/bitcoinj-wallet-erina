@@ -1,28 +1,71 @@
-# Bitcoin Wallet Application
+Bitcoin Wallet Application
 
-This is an Implementation of a simple BTC wallet for handling transactions of another application. It uses bitcoinj that is a library for working with the Bitcoin protocol. It can maintain a wallet, send/receive transactions without needing a local copy of Bitcoin Core. Bitcoinj uses SPV mode (lightweight simplified payment verification). In this mode, only a small part of the block chain is downloaded, making bitcoinj suitable for usage on constrained devices like smartphones.
+This is my customized implementation of a Bitcoin Wallet Application built using bitcoinj
+, a Java library for working with the Bitcoin protocol.
 
-for runnig the application you need to complete application.properties with your specific information.
- 
- ### After blockchain downloaded completely:
- 
- ![image](https://user-images.githubusercontent.com/70103439/171608854-66f33eea-27f7-4091-bf04-146a4010747a.png)
+The wallet can:
 
-### The application provides your wallet address:
+Maintain addresses and keys
 
-![image](https://user-images.githubusercontent.com/70103439/171615794-9f655c77-4beb-469e-be1a-6343f4e12d69.png)
+Send/receive transactions
+
+Provide balance information through APIs
+
+Run without needing a local copy of Bitcoin Core (uses SPV mode)
+
+Bitcoinj works in SPV (Simplified Payment Verification) mode, meaning only a lightweight part of the blockchain is downloaded, making it suitable for constrained devices like smartphones or lightweight servers.
+
+🚀 Features
+
+Generate a wallet address
+
+Check wallet balance using an API
+
+Send BTC to any valid address with an API
+
+Lightweight blockchain sync (SPV mode)
+
+⚙️ Setup Instructions
+
+Clone the repository
+
+git clone https://github.com/your-username/bitcoin-wallet-app.git
+cd bitcoin-wallet-app
 
 
-### you could use the get balance API to findout your balance:
+Configure application properties
+Create or edit application.properties with your specific values (network, node details, etc.).
 
-![image](https://user-images.githubusercontent.com/70103439/171608649-7c736b8c-f4ce-4ab9-9acf-eaa27817dd32.png)
+Build and run
 
-### Send coins to any BTC address with send coin API:
-
-![image](https://user-images.githubusercontent.com/70103439/171621491-bd1bb5f3-684d-4595-9eff-df563b7b5767.png)
-
-
-![image](https://user-images.githubusercontent.com/70103439/171626116-b529df66-91ae-4953-b3da-a5e0b4688c9c.png)
+./mvnw spring-boot:run
 
 
-![image](https://user-images.githubusercontent.com/70103439/171626187-34cbe7dd-f7c2-4f02-8a22-ab4925466d50.png)
+(or mvn spring-boot:run if Maven is installed)
+
+📸 Screenshots
+After blockchain downloaded completely:
+
+Wallet Address Generated:
+
+Get Balance API:
+
+Send BTC with API:
+
+
+
+
+
+
+📌 Notes
+
+Make sure you’re connected to the internet for blockchain sync.
+
+The first sync may take time (SPV mode).
+
+Always keep your private keys secure.
+
+👤 Author
+
+Developed by Erina Smilin S ✨
+(Customized from [Bitcoin-Wallet-App-Implementation-With-BitcoinJ](https://github.com/mohsenamjadi/Bitcoin-Wallet-App-Implementation-With-BitcoinJ))
